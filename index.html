@@ -1,0 +1,136 @@
+<!-- 公共头部 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>思颖科技数码商城</title>
+  <style>
+    /* 公共样式 */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      background: #0a192f;
+      color: #8892b0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* 头部样式 */
+    .header {
+      display: flex;
+      height: 50px;
+      background: #020c1b;
+      padding: 0 20px;
+    }
+    .logo {
+      width: 200px;
+      background: url(logo.png) no-repeat center;
+    }
+    .nav {
+      width: 824px;
+      display: flex;
+      align-items: center;
+    }
+    .nav a {
+      color: #64ffda;
+      text-decoration: none;
+      margin: 0 15px;
+      padding: 5px;
+      transition: all 0.3s;
+    }
+    .nav a:hover {
+      color: #fff;
+      border-bottom: 2px solid #64ffda;
+    }
+
+    /* 内容区通用样式 */
+    .content {
+      min-height: calc(100vh - 100px);
+      display: flex;
+    }
+
+    /* 底部样式 */
+    .footer {
+      height: 50px;
+      background: #020c1b;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #495670;
+    }
+  </style>
+</head>
+<body>
+<!-- 头部 -->
+<div class="header">
+  <div class="logo"></div>
+  <nav class="nav">
+    <a href="aboutus.html">公司简介</a>
+    <a href="goods.html">热销商品</a>
+    <a href="#">打折处理</a>
+    <a href="#">联系我们</a>
+  </nav>
+</div>
+<!-- 主页内容 -->
+<div class="content">
+  <!-- 左边登录区 -->
+  <div class="left-side" style="width: 30%; padding: 20px;">
+    <div class="login-box">
+      <h3 style="color: #64ffda;">用户登录</h3>
+      <form id="loginForm">
+        <input type="text" placeholder="用户名" style="width:100%; margin:10px 0; padding:8px;">
+        <input type="password" placeholder="密码" style="width:100%; margin:10px 0; padding:8px;">
+        <button type="submit" style="background: #64ffda; color: #020c1b; padding:8px 20px; border:none; cursor:pointer;">登录</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 右边商品展示 -->
+  <div class="right-side" style="width:70%; padding:20px; display:grid; grid-template-columns: repeat(4, 1fr); gap:20px;">
+    <!-- 手机 -->
+    <div class="product-card" data-category="phone">
+      <div class="product-icon" style="background: linear-gradient(135deg, #64ffda33, transparent);">
+        <img src="phone-icon.png" alt="智能手机" style="width:80px; height:80px;">
+      </div>
+      <h3 style="color:#64ffda; margin:10px 0;">旗舰手机</h3>
+      <div class="product-info">
+        <p style="color:#8892b0;">最新5G技术</p>
+        <p class="price-tag" style="color:#64ffda; font-weight:bold;">¥ 5999</p>
+      </div>
+    </div>
+
+    <!-- 笔记本 -->
+    <div class="product-card" data-category="laptop">
+      <div class="product-icon" style="background: linear-gradient(135deg, #64ffda33, transparent);">
+        <img src="laptop-icon.png" alt="笔记本电脑" style="width:80px; height:80px;">
+      </div>
+      <h3 style="color:#64ffda; margin:10px 0;">超极本</h3>
+      <div class="product-info">
+        <p style="color:#8892b0;">i7 12代处理器</p>
+        <p class="price-tag" style="color:#64ffda; font-weight:bold;">¥ 12999</p>
+      </div>
+    </div>
+
+    <!-- 相机 -->
+    <div class="product-card" data-category="camera">
+      <div class="product-icon" style="background: linear-gradient(135deg, #64ffda33, transparent);">
+        <img src="camera-icon.png" alt="专业相机" style="width:80px; height:80px;">
+      </div>
+      <h3 style="color:#64ffda; margin:10px 0;">全画幅相机</h3>
+      <div class="product-info">
+        <p style="color:#8892b0;">4K视频拍摄</p>
+        <p class="price-tag" style="color:#64ffda; font-weight:bold;">¥ 21999</p>
+      </div>
+    </div>
+
+    <!-- 智能手表 -->
+    <div class="product-card" data-category="watch">
+      <div class="product-icon" style="background: linear-gradient(135deg, #64ffda33, transparent);">
+        <img src="watch-icon.png" alt="智能手表" style="width:80px; height:80px;">
+      </div>
+      <h3 style="color:#64ffda; margin:10px 0;">健康手表</h3>
+      <div class="product-info">
+        <p style="color:#8892b0;">血氧心率监测</p>
+        <p class="price-tag" style="color:#64ffda; font-weight:bold;">¥ 2999</p>
+      </div>
+    </div>
+  </div>
+</div>

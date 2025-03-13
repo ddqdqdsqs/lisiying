@@ -1,0 +1,172 @@
+@keyframes scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-80%); }
+}
+
+.product-card {
+  background: #112240;
+  padding: 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.left-side {
+  border-right: 1px solid #233554;
+}
+.product-card {
+  background: #112240;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, #64ffda33, transparent);
+  transform: rotate(45deg);
+  transition: 0.5s;
+}
+
+.product-card:hover::before {
+  animation: shine 1.5s;
+}
+
+@keyframes shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
+.product-icon {
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.price-tag::before {
+  content: '¥ ';
+  font-size: 0.8em;
+}
+/* 时间轴动画 */
+.timeline-item {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s ease;
+}
+
+.timeline-item.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* 数据统计悬浮效果 */
+.stat-item {
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(100,255,218,0.2);
+}
+
+/* 愿景板块特效 */
+.vision-item {
+  border: 1px solid #233554;
+  transition: all 0.3s ease;
+}
+
+.vision-item:hover {
+  border-color: #64ffda;
+  background: #112240 !important;
+}
+/* 排行榜容器 */
+.hot-products {
+  padding: 20px;
+  background: #0a192f;
+  border-radius: 12px;
+}
+
+.section-title {
+  color: #64ffda;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* 商品列表 */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 单个商品项 */
+.product-item {
+  display: flex;
+  align-items: center;
+  background: #112240;
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(100,255,218,0.2);
+}
+
+/* 排名样式 */
+.rank {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.top1 .rank { background: #ffd700; color: #1a1a1a; }
+.top2 .rank { background: #c0c0c0; color: #1a1a1a; }
+.top3 .rank { background: #cd7f32; color: #fff; }
+.top4 .rank, .top5 .rank { background: #233554; color: #64ffda; }
+
+/* 商品类别 */
+.category {
+  width: 80px;
+  font-size: 0.9em;
+  color: #64ffda;
+  margin-right: 15px;
+}
+
+/* 商品名称 */
+.name {
+  flex: 1;
+  font-size: 1.1em;
+  color: #64ffda;
+}
+
+/* 价格 */
+.price {
+  width: 100px;
+  text-align: right;
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+/* 销量 */
+.sales {
+  width: 120px;
+  text-align: right;
+  color: #8892b0;
+  font-size: 0.9em;
+}
