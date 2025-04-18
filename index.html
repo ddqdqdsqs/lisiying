@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>全屏音视频演示</title>
+  <style>
+    /* 重置默认边距 */
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0;
+    }
+
+    /* 容器样式 */
+    .media-container {
+      width: 80%;
+      max-width: 1200px;
+      margin: 20px 0;
+    }
+
+    /* 标题样式 */
+    h2 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+
+    /* 视频播放器 */
+    video {
+      width: 100%;
+      height: auto;
+      max-height: 70vh;
+      background: #000;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* 音频播放器 */
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<!-- 视频区块 -->
+<div class="media-container">
+  <h2>视频示例</h2>
+  <video controls>
+    <source src="your-video.mp4" type="video/mp4">
+    浏览器不支持视频播放
+  </video>
+</div>
+
+<!-- 音频区块 -->
+<div class="media-container">
+  <h2>音频示例</h2>
+  <audio controls>
+    <source src="your-audio.mp3" type="audio/mpeg">
+    浏览器不支持音频播放
+  </audio>
+</div>
+</body>
+</html>
